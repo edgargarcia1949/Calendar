@@ -233,8 +233,6 @@ def MonthTextBoxes(bool):
                 Day = int(textbox3.getText())
             
     def outputComments():    
-        global Month
-        global Day
         CommentList2[(Month-1)*31+(Day-1)] = textbox4.getText()
         
     if bool:       
@@ -264,7 +262,6 @@ def MonthTextBoxes(bool):
 def WeekTextBoxes(bool):
     def outputMonth():
         global Month
-        global BigList
         global BLPtr
         if(textbox.getText()).isdigit():
             if(int(textbox.getText())) >= 1 and (int(textbox.getText())) <= 12:
@@ -272,21 +269,16 @@ def WeekTextBoxes(bool):
                 BLPtr=BigList.index([Year, Month, 1])
                        
     def outputComments():    
-        global Day
-        global Hour
-        global CommentList
         CommentList[Hour*7+Day] = textbox2.getText()
     
     def outputDay():
         global Day
-        global day_index
         if(textbox3.getText()).isdigit():
             if(int(textbox3.getText())) >=1 and (int(textbox3.getText())) <= 7:
                 Day = day_index[textbox3.getText()]
           
     def outputHour():
         global Hour
-        global hour_index
         if(textbox4.getText()).isdigit():
             if(int(textbox4.getText())) >=1 and (int(textbox4.getText())) <= 12:
                 Hour = hour_index[textbox4.getText()]
